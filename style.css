@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #000000, #333333);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+legend {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+#textwrap {
+    width: 70%;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#header {
+    background-color: rgb(235, 235, 235);
+    border: 2px solid black;
+}
+
+#header h1 {
+    text-align: center;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: whitesmoke;
+}
+
+#content {
+    min-height: 1000px;
+    height: auto;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 15px;
+}
+
+#content_info {
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    height: auto;
+}
+
+#news {
+    flex-grow: 1;
+    width: 20%;
+    margin: 5px;
+}
+
+#news fieldset {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#news p {
+    text-align: justify;
+    margin: 10px;
+}
+
+#recent_releases {
+    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 5px;
+}
+
+#recent_releases fieldset {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.release-item {
+    display: flex;
+    height: 122px;
+    margin: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow-y: hidden;
+    border: 2px solid gray;
+    transition: border-color, height 0.2s ease;
+}
+
+.release-item:hover {
+    border: 2px solid black;
+    height: 142px;
+}
+
+.release-item:hover img{
+    height: 140px;
+}
+
+.release-item img{
+    border: 1px solid black;
+    width: auto;
+    height: 120px;
+    transition: height 0.2s ease;
+}
+
+.release-item div.details {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 15px;
+}
+
+.release-item div.title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.release-item div.artist {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    #textwrap {
+        width: 90%;
+    }
+
+    #news, #recent_releases {
+        width: 100%;
+    }
+}
